@@ -1,0 +1,45 @@
+<?php
+
+
+$name = $_POST['cast_name'];
+$age = $_POST['cast_age'];
+$department =$_POST['department'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確認画面</title>
+</head>
+<body>
+    <h1>入力内容をご確認ください。</h1>
+    <h2>問題なければ「確定」、修正する場合は「キャンセル」をクリックしてください。</h2>
+    
+    <table border="1">
+        <tr>
+            <th>項目</th>
+            <th>入力内容</th>
+        </tr>
+        <tr>
+            <td>社員名</td>
+            <td><?php echo $name; ?></td>
+        </tr>
+        <tr>
+            <td>年齢</td>
+            <td><?php echo $age;?></td>
+        </tr>
+        <tr>
+            <td>所属部署</td>
+            <td><?php echo $department ?></td>
+        </tr>
+    </table>
+
+    <p>
+        <button id="confirm_btn" onclick="location.href='complete.php';">確定</button>
+        <button id="cancel-btn" onclick="history.back();">戻る</button>
+    </p>
+</body>
+</html>
